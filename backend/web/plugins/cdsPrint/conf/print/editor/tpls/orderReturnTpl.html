@@ -1,0 +1,155 @@
+<div class='oneCate'>
+	<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>纸张设置+边距设置<div style='float: right; margin-right: 3px'>[单位:毫米]</div></div>
+	<div class='tplItemWrap'>
+		<div class='tplItemRow'>
+			<span>三联单尺寸:</span>
+			<button  bill_width="241" bill_height="280"  class="bill btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 一等份</button>
+			<button  bill_width="241" bill_height="140"  class="bill btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> 二等份</button>
+			<button  bill_width="241" bill_height="93"   class="bill btn btn-primary btn-xs"><span class="glyphicon glyphicon-ok"></span> 三等份</button>
+		</div>
+		<div class='tplItemRow'>
+			<span>其它纸张尺寸:</span>
+			<button  bill_width="210" bill_height="297"  class="bill btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> A4纸</button>
+			<button  bill_width="148" bill_height="210"  class="bill btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> A5纸</button>
+		</div>
+		<div class="tplItemRow">
+			<span>打印边距设置：</span>
+			<span style='margin-left: 14px;'>上边距:</span><input name='page_top' type='text' class='w2ui-input w2field w2float' style='width:45px'/>
+			<span style='margin-left: 8px;'>左边距:</span><input name='page_left' type='text' class='w2ui-input w2field w2float' style='width:45px'/>
+		</div>
+		<div class='tplItemRow'>
+			<span>纸张宽:</span><input name='page_width' id="page_width" type='text' class='w2ui-input w2field w2float' style='width:80px'/>
+			<span style='margin-left: -2px;'>纸张高:</span><input name='page_height' id="page_height" type='text' class='w2ui-input w2field w2float' style='width:80px'/>
+			<button  id="setting"   class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 确定</button>
+		</div>
+		<div class='tplItemRow' style='display:none'>
+			<span>打印机:</span><input name='printer' id='printer_list' type='list' class='w2ui-select w2field w2ui-input' style='width:140px'/>
+			<span style='margin-left: 5px;'>纸张名:</span><input name='paper' id='paper_list' type='list' class='w2ui-select w2field w2ui-input' style='width:140px'/>
+		</div>
+		<div class='tplItemRow' style='display:none'>
+			<div style='width: 40px;float:left;margin-top: -4px; text-align: right;'>打印边<br/>界按:</div><input name='printer_margin_type' id='printer_border' type='list' class='w2ui-select w2field w2ui-input' style='width:140px;float:left'/>
+			<div style='width: 40px;float:left; margin-left: 5px; margin-top: -4px; text-align: right;'>打印方<br/>向:</div><input name='print_direct' id='print_direct' type='list' class='w2ui-select w2field w2ui-input' style='width:140px;float:left;'/>
+			<div  style='clear:both;'></div>
+		</div>
+	</div>
+</div>
+	<div class='oneCate'>
+		<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>商品信息</div>
+		<div class='tplItemWrap' pre='goods'>
+
+			<label for="goods-no">序号</label>
+	        <input type="checkbox" name="no" id="goods-no">
+
+		    <label for="goods-commodity_name">商品名称</label>
+			<input type="checkbox" name="commodity_name" id="goods-commodity_name">
+			<label for="commodity_code">商品编码</label>
+			<input type="checkbox" name="commodity_code" id="commodity_code">
+			<label for="unit_sell">商品单位</label>
+			<input type="checkbox" name="unit_sell" id="unit_sell">
+			<label for="recv_amount">发货数量</label>
+			<input type="checkbox" name="recv_amount" id="recv_amount">
+			<label for="delivery_unit_price">发货单价</label>
+			<input type="checkbox" name="delivery_unit_price" id="delivery_unit_price">
+			<label for="apply_amount">申请退货数</label>
+			<input type="checkbox" name="apply_amount" id="apply_amount">
+			<label for="apply_price">申请退货单价</label>
+			<input type="checkbox" name="apply_price" id="apply_price">
+			<label for="apply_total_price">申请退货金额</label>
+			<input type="checkbox" name="apply_total_price" id="apply_total_price">
+			<label for="audit_amount">审批数</label>
+			<input type="checkbox" name="audit_amount" id="audit_amount">
+
+			<label for="audit_price">审批单价</label>
+			<input type="checkbox" name="audit_price" id="audit_price">
+			<label for="total_price">审批金额</label>
+			<input type="checkbox" name="total_price" id="total_price">
+			<label for="goods_remark">备注</label>
+			<input type="checkbox" name="goods_remark" id="goods_remark">
+
+			<div class='tplItemRow' pre='cus_define'>
+				<input id='words' placeholder='输入列名' type='text'/>
+				<button name='empty_column' id='add_empty_column' title="" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-ok"></span> 添加空列</button>
+			</div>
+		</div>
+	</div>
+
+	<div class='oneCate'>
+		<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>主体信息</div>
+		<div class='tplItemWrap' pre='trade'>
+
+			<label for="return_no">退货单号</label>
+	        <input type="checkbox" name="return_no" id="return_no">
+			<label for="source_order_no">关联订单号</label>
+			<input type="checkbox" name="source_order_no" id="source_order_no">
+			<label for="order_create_time">下单时间</label>
+			<input type="checkbox" name="order_create_time" id="order_create_time">
+	        <label for="remark">退货原因</label>
+	        <input type="checkbox" name="remark" id="remark">
+			<label for="create_time">退货时间</label>
+			<input type="checkbox" name="create_time" id="create_time">
+	        <label for="order_apply_total_price">申请退货总价</label>
+	        <input type="checkbox" name="order_apply_total_price" id="order_apply_total_price">
+			<label for="actual_price">实际退货总价</label>
+			<input type="checkbox" name="actual_price" id="actual_price">
+
+
+		</div>
+	</div>
+
+	<div class='oneCate'>
+		<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>退货人信息</div>
+		<div class='tplItemWrap' pre='trade'>
+
+		    <label for="email">客户</label>
+	        <input type="checkbox" name="email" id="email">
+	        <label for="account_tel">店铺手机</label>
+	        <input type="checkbox" name="account_tel" id="account_tel">
+			<label for="receive_tel">收货手机</label>
+			<input type="checkbox" name="receive_tel" id="receive_tel">
+	        <label for="address_detail">详细地址</label>
+	        <input type="checkbox" name="address_detail" id="address_detail">
+
+	        <!--<label for="receive_time">收货时段</label>
+	        <input type="checkbox" name="receive_time" id="receive_time">-->
+		</div>
+	</div>
+<script>
+	$(function(){
+		$(".bill").click(function(){
+			var ta=$(this);
+			var w=ta.attr("bill_width"),h=ta.attr("bill_height");
+			console.log(w+":"+h);
+			$("#page_width").val(w);
+			$("#page_height").val(h);
+			$('.paper').width(w+'mm');
+			$('.paper').height(h+'mm');
+			$('#goods_container_wrap').css({width:w+'mm'});
+		});;
+		$("#setting").click(function(){
+			var w=$.trim($("#page_width").val());
+			var h=$.trim($("#page_height").val());
+			if(!w||!h){
+				w2alert('请填写正确的尺寸值!');
+				return false;
+			}
+			$('.paper').width(w+'mm');
+			$('.paper').height(h+'mm');
+			$('#goods_container_wrap').css({width:w+'mm'});
+		});
+		$("#setText").click(function(){
+			var sed = $('.paper').find('.a_field.selected');
+			if(sed){
+				var v=$(".cus_define #words").val();
+				if($.trim(v)==""){
+					w2alert("请填写你要修改的内容");
+				}else{
+					sed.prop ('firstChild').nodeValue=v;
+				}
+
+			}else{
+				w2alert("请选择你要修改的内容");
+			}
+
+		});
+	});
+</script>

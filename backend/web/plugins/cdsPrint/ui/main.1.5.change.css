@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+/* body,html{font-family:'Microsoft YaHei' !important}; */
+
+/* 修复中文按钮底色显示异常问题 */
+button.w2ui-btn-blue,button.w2ui-btn-red{
+	text-shadow:none !important;
+}
+/* 表格页脚 */
+.w2ui-grid .w2ui-grid-footer{
+	/* 
+	over-flow:scroll !important;
+	height: auto !important;
+	text-align: left; */
+}
+/* 去掉表格边框 */
+.w2ui-grid{
+	border:none !important;
+}
+
+/* 添加表格tr的上下边线 */
+.w2ui-grid .w2ui-grid-body .w2ui-grid-records table tr.w2ui-even, .w2ui-grid .w2ui-grid-body .w2ui-grid-frecords table tr.w2ui-even {
+  border: 1px solid #D6D5D7;
+  border-left:none;
+}
+
+/* 表头去掉... */
+.w2ui-grid .w2ui-grid-body table .w2ui-head>div{
+	text-overflow: inherit;
+}
+/* 表去掉... */
+.w2ui-grid .w2ui-grid-body table td.w2ui-grid-data>div{
+	text-overflow: inherit;
+}
+/* 表格字体 */
+.w2ui-reset table tr th, .w2ui-reset table tr td{
+	font-size: 13px;
+}
+
+/* For boot change start*/
+label{
+	font-weight: normal;
+}
+body{
+	color: #000;
+}
+/* For boot change end*/
+

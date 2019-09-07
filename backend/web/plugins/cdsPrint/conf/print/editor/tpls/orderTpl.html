@@ -1,0 +1,353 @@
+
+<!-- ADD BY： 陈端生15111222285 [2017/05/20] - 订单打印字段 -->
+<div class='oneCate'>
+	<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>纸张设置+边距设置<div style='float: right; margin-right: 3px'>[单位:毫米]</div></div>
+	<div class='tplItemWrap'>
+		<div class='tplItemRow'>
+			<span>三联单尺寸:</span>
+			<button  bill_width="241" bill_height="280"  class="bill btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 一等份</button>
+			<button  bill_width="241" bill_height="140"  class="bill btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> 二等份</button>
+			<button  bill_width="241" bill_height="93"   class="bill btn btn-primary btn-xs"><span class="glyphicon glyphicon-ok"></span> 三等份</button>
+		</div>
+		<div class='tplItemRow'>
+			<span>其它纸张尺寸:</span>
+			<button  bill_width="210" bill_height="297"  class="bill btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> A4纸</button>
+			<button  bill_width="148" bill_height="210"  class="bill btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> A5纸</button>
+		</div>
+		<div class="tplItemRow">
+			<span>打印边距设置：</span>
+			<span style='margin-left: 14px;'>上边距:</span><input name='page_top' type='text' class='w2ui-input w2field w2float' style='width:45px'/>
+			<span style='margin-left: 8px;'>左边距:</span><input name='page_left' type='text' class='w2ui-input w2field w2float' style='width:45px'/>
+		</div>
+		<div class='tplItemRow'>
+			<span>纸张宽:</span><input name='page_width' id="page_width" type='text' class='w2ui-input w2field w2float' style='width:80px'/>
+			<span style='margin-left: -2px;'>纸张高:</span><input name='page_height' id="page_height" type='text' class='w2ui-input w2field w2float' style='width:80px'/>
+			<button  id="setting"   class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 确定</button>
+		</div>
+		<div class='tplItemRow' style='display:none'>
+			<span>打印机:</span><input name='printer' id='printer_list' type='list' class='w2ui-select w2field w2ui-input' style='width:140px'/>
+			<span style='margin-left: 5px;'>纸张名:</span><input name='paper' id='paper_list' type='list' class='w2ui-select w2field w2ui-input' style='width:140px'/>
+		</div>
+		<div class='tplItemRow' style='display:none'>
+			<div style='width: 40px;float:left;margin-top: -4px; text-align: right;'>打印边<br/>界按:</div><input name='printer_margin_type' id='printer_border' type='list' class='w2ui-select w2field w2ui-input' style='width:140px;float:left'/>
+			<div style='width: 40px;float:left; margin-left: 5px; margin-top: -4px; text-align: right;'>打印方<br/>向:</div><input name='print_direct' id='print_direct' type='list' class='w2ui-select w2field w2ui-input' style='width:140px;float:left;'/>
+			<div  style='clear:both;'></div>
+		</div>
+	</div>
+</div>
+	<div class='oneCate'>
+		<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>商品信息</div>
+		<div class='tplItemWrap' pre='goods'>
+
+			<label for="goods-no">序号</label>
+	        <input type="checkbox" name="no" id="goods-no">
+
+		    <label for="goods-name">商品名称</label>
+			<input type="checkbox" name="name" id="goods-name">
+
+		    <label for="goods-amount_with_unit">订购数量</label>
+			<input type="checkbox" name="amount_with_unit" id="goods-amount_with_unit">
+			<label for="amount">订购数量(无单位)</label>
+			<input type="checkbox" name="amount" id="amount">
+			<label for="unit">订购单位</label>
+			<input type="checkbox" name="unit" id="unit">
+			<label for="durability_period">保质期</label>
+			<input type="checkbox" name="durability_period" id="durability_period">
+			<label for="mfg_date">生产日期</label>
+			<input type="checkbox" name="mfg_date" id="mfg_date">
+
+		    <label for="goods-actual_amount_with_unitsell">发货数量</label>
+			<input type="checkbox" name="actual_amount_with_unitsell" id="goods-actual_amount_with_unitsell">
+			<label for="actual_amount">发货数量(无单位)</label>
+			<input type="checkbox" name="actual_amount" id="actual_amount">
+			<label for="unit_sell">发货单位</label>
+			<input type="checkbox" name="unit_sell" id="unit_sell">
+		    <label for="goods-unit_price">订购单价</label>
+			<input type="checkbox" name="unit_price" id="goods-unit_price">
+			<label for="price_float_rate" id="price_float_col" style="display: none;">下浮率</label>
+			<input type="checkbox" name="price_float_rate" id="price_float_rate" style="display:none;">
+			<label for="goods-actual_price">发货单价</label>
+			<input type="checkbox" name="actual_price" id="goods-actual_price">
+			<label for="goods-summary">规格</label>
+			<input type="checkbox" name="summary" id="goods-summary">
+			<label for="tax_rate">税率</label>
+			<input type="checkbox" name="tax_rate" id="tax_rate">
+
+			<label for="tax_rate_price">税额</label>
+			<input type="checkbox" name="tax_rate_price" id="tax_rate_price">
+
+			<label for="goods-remark">备注</label>
+			<input type="checkbox" name="remark" id="goods-remark">
+			<label for="goods-remark2">计算公式</label>
+			<input type="checkbox" name="remark2" id="goods-remark2">
+			<!-- 一级分类、商品编码、（订购单位、分拣单位和数量拆开）、分拣金额 -->
+
+			<label for="goods-category_name">一级分类</label>
+			<input type="checkbox" name="category_name" id="goods-category_name">
+		<!--	<label for="goods-category_name2">二级分类</label>
+			<input type="checkbox" name="category_name2" id="goods-category_name2">-->
+
+
+			<label for="goods-commodity_code">商品编码</label>
+			<input type="checkbox" name="commodity_code" id="goods-commodity_code">
+			<label for="goods-total_price">下单小计</label>
+			<input type="checkbox" name="row_money2" id="goods-total_price">
+			<label for="goods-row_money">发货金额</label>
+			<input type="checkbox" name="row_money" id="goods-row_money">
+			<label for="return_amount">退货数量</label>
+			<input type="checkbox" name="return_amount" id="return_amount">
+			<label for="return_info_price">退货单价</label>
+			<input type="checkbox" name="return_info_price" id="return_info_price">
+			<label for="return_total_price">退货金额</label>
+			<input type="checkbox" name="return_total_price" id="return_total_price">
+
+			<label for="protocol_org_price" style="display:none;" id="org_price_col">协议市场价</label>
+			<input type="checkbox" name="protocol_org_price" style="display:none;" id="protocol_org_price">
+			<label for="protocol_discount" id="protocol_discount_col" style="display:none;" >协议折扣(%)</label>
+			<input type="checkbox" name="protocol_discount" style="display:none;" id="protocol_discount">
+
+			<div class='tplItemRow' pre='cus_define'>
+				<input id='words' placeholder='输入列名' type='text'/>
+				<button name='empty_column' id='add_empty_column' title="" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-ok"></span> 添加空列</button>
+			</div>
+		</div>
+	</div>
+
+	<div class='oneCate'>
+		<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>主体信息</div>
+		<div class='tplItemWrap' pre='trade'>
+
+	        <label for="order_no">订单号</label>
+	        <input type="checkbox" name="order_no" id="order_no">
+
+	        <label for="create_time">下单时间</label>
+	        <input type="checkbox" name="create_time" id="create_time">
+
+	        <label for="delivery_date">配送时间</label>
+	        <input type="checkbox" name="delivery_date" id="delivery_date">
+
+	        <label for="remark">订单备注</label>
+	        <input type="checkbox" name="remark" id="remark">
+			<label for="order_total_amount">下单数量合计</label>
+			<input type="checkbox" name="order_total_amount" id="order_total_amount">
+	        <label for="actual_total_pay_str">实际总价</label>
+	        <input type="checkbox" name="actual_total_pay_str" id="actual_total_pay_str">
+
+	        <label for="actual_total_pay_str_capital">大写实际总价</label>
+	        <input type="checkbox" name="actual_total_pay_str_capital" id="actual_total_pay_str_capital">
+
+	       <label for="freight_price">运费</label>
+	        <input type="checkbox" name="freight_price" id="freight_price">
+
+	        <label for="print_time">打印时间</label>
+	        <input type="checkbox" name="print_time" id="print_time">
+
+	        <label for="seller_name">业务员</label>
+	        <input type="checkbox" name="seller_name" id="seller_name">
+
+	        <label for="seller_mobile">业务员手机</label>
+	        <input type="checkbox" name="seller_mobile" id="seller_mobile">
+
+	        <label for="driver">司机</label>
+	        <input type="checkbox" name="driver" id="driver">
+
+	        <label for="driver_mobile">司机手机</label>
+	        <input type="checkbox" name="driver_mobile" id="driver_mobile">
+
+	        <label for="shop_name">线路名称</label>
+	        <input type="checkbox" name="shop_name" id="shop_name">
+			<label for="stopgap_code">线路临时编码</label>
+			<input type="checkbox" name="stopgap_code" id="stopgap_code">
+
+			<label for="op_name">制单人</label>
+	        <input type="checkbox" name="op_name" id="op_name">
+			<label for="pay_way_txt">支付方式</label>
+			<input type="checkbox" name="pay_way_txt" id="pay_way_txt">
+			<label for="price">下单金额</label>
+			<input type="checkbox" name="price" id="price">
+			<label for="pay_price">已付金额</label>
+			<input type="checkbox" name="pay_price" id="pay_price">
+			<label for="should_pay_price">应付金额</label>
+			<input type="checkbox" name="should_pay_price" id="should_pay_price">
+			<label for="diff_price">多退少补金额</label>
+			<input type="checkbox" name="diff_price" id="diff_price">	
+			<label for="dec_price">满减优惠金额</label>
+			<input type="checkbox" name="dec_price" id="dec_price">
+			<label for="return_price">退货总额</label>
+			<input type="checkbox" name="return_price" id="return_price">
+			<label for="order_delivery_time">收货时间段</label>
+			<input type="checkbox" name="order_delivery_time" id="order_delivery_time">
+		</div>
+	</div>
+
+	<div class='oneCate'>
+		<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>收货人信息</div>
+		<div class='tplItemWrap' pre='trade'>
+
+		    <label for="email">客户名称</label>
+	        <input type="checkbox" name="email" id="email">
+
+	        <label for="cus_name">联系人</label>
+	        <input type="checkbox" name="cus_name" id="cus_name">
+
+	        <label for="user_code">客户编码</label>
+	        <input type="checkbox" name="user_code" id="user_code">
+			<label for="sort_code" id="sort_code_label" style="display: none;">临时编码</label>
+			<input type="checkbox" name="sort_code" id="sort_code" style="display: none;">
+
+	        <label for="user_code_barcode">客户编码条码</label>
+	        <input type="checkbox" name="user_code" id="user_code_barcode" _type='barcode'>
+
+	        <label for="account_tel">店铺手机</label>
+	        <input type="checkbox" name="account_tel" id="account_tel">
+			<label for="receive_tel">收货手机</label>
+			<input type="checkbox" name="receive_tel" id="receive_tel">
+	        <label for="address_detail">详细地址</label>
+	        <input type="checkbox" name="address_detail" id="address_detail">
+
+	        <!--<label for="receive_time">收货时段</label>
+	        <input type="checkbox" name="receive_time" id="receive_time">-->
+		</div>
+	</div>
+<div class='oneCate' id="img_layer">
+	<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>上传图片（<b style="color:#e80c0c;font-size:16px;">最多5张500kb以内 gif,jpg,png图片 </b>）</div>
+	<div class='tplItemWrap' pre='trade'>
+		<input  type="hidden" id="img_url">
+		<span>
+
+					<iframe style="width:0px;height: 0px;" name="image_upload"></iframe>
+					<form enctype="multipart/form-data" id="image_form" action="" method="post" target="image_upload">
+						<input type="hidden" name="loc" id="loc"/>
+						<input type="file" accept="image/png,image/jpeg,image/jpg,image/gif" value="选择图片文件" onchange="img_upload()" id="image_file" class="btn-xs" name="file"><input type="hidden" id="t_id" name="tid">
+					</form>
+		</span>
+		<button name='image' style="display: none;" _type='image' _id="img_url" id='add_image' type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-ok"></span> 添加图片</button>
+	</div>
+</div>
+<script>
+	$(function(){
+		$(".bill").click(function(){
+			var ta=$(this);
+			var w=ta.attr("bill_width"),h=ta.attr("bill_height");
+			console.log(w+":"+h);
+			$("#page_width").val(w);
+			$("#page_height").val(h);
+			$('.paper').width(w+'mm');
+			$('.paper').height(h+'mm');
+			$('#goods_container_wrap').css({width:w+'mm'});
+		});;
+		$("#setting").click(function(){
+			var w=$.trim($("#page_width").val());
+			var h=$.trim($("#page_height").val());
+			if(!w||!h){
+				w2alert('请填写正确的尺寸值!');
+				return false;
+			}
+			$('.paper').width(w+'mm');
+			$('.paper').height(h+'mm');
+			$('#goods_container_wrap').css({width:w+'mm'});
+		});
+		$("#setText").click(function(){
+			var sed = $('.paper').find('.a_field.selected');
+			if(sed){
+				var v=$(".cus_define #words").val();
+				if($.trim(v)==""){
+					w2alert("请填写你要修改的内容");
+				}else{
+					sed.prop ('firstChild').nodeValue=v;
+				}
+
+			}else{
+				w2alert("请选择你要修改的内容");
+			}
+
+		});
+		$("#image_btn").click(function(){
+			var img_val=$("#image_file").val();
+			console.log(img_val);
+			if(img_val==""||!img_val){
+				w2alert("请选择你要上传的图片");
+				return false;
+			}
+			if(document.getElementById("image_file")&&document.getElementById("image_file").files){
+				var file = document.getElementById("image_file").files[0];
+				console.log(file);
+				if(!/image\/[png|jpeg|jpg]/g.test(file.type)){
+					w2alert("此处仅支持jpg,png格式图片上传");
+					return false;
+				}
+				var act="",tid=0;
+
+				act=getQueryString('url');
+				tid=getQueryString('id');
+				$("#t_id").val(tid==null?0:tid);
+				$("#loc").val(location.protocol+"//"+location.host);
+				$("#image_form").prop("action",act+"/superAdmin/printerConfig/UploadImage");
+				$("#image_form").submit();
+			}else{
+				w2alert("您的浏览器有点落后，建议更换Chrome内核浏览器");
+				return false;
+			}
+
+		});
+	});
+	function check_img(id){
+		var img_val=$("#"+id).val();
+		console.log(img_val);
+		if(img_val==""||!img_val){
+			w2alert("请选择你要上传的图片");
+			return false;
+		}
+		if(document.getElementById(id)&&document.getElementById(id).files){
+			var file = document.getElementById(id).files[0];
+			if(!/image\/[jpg|jpeg|png]/ig.test(file.type)){
+				w2alert("此处仅支持jpg,png格式图片上传");
+				return false;
+			}
+			return true;
+		}else{
+			w2alert("您的浏览器有点落后，建议更换Chrome内核浏览器");
+			return false;
+		}
+	}
+	function  img_upload() {
+		var img_count=$(".paper img").length;
+		var img_val=$("#image_file").val();
+		console.log(img_val);
+		if(img_val==""||!img_val){
+			w2alert("请选择你要上传的图片");
+			return false;
+		}
+		if(document.getElementById("image_file")&&document.getElementById("image_file").files){
+			var file = document.getElementById("image_file").files[0];
+			console.log(file);
+			if(!/image\/[jpg|jpeg|png|gif]/g.test(file.type)){
+				w2alert("此处仅支持jpg,png,gif格式图片上传");
+				return false;
+			}
+			if(img_count>=5){
+				//$("#img_layer").hide();
+				$("#img_file").val("");
+				$("#image_form")[0].reset();
+				w2alert("服务器资源有限：最多上传5张图片");
+				return false;
+			}
+			if(file.size>524288){
+				w2alert("服务器资源有限：最大支持500kb以内的图片");
+				return false;
+			}
+			var act="",tid=0;
+
+			act=getQueryString('url');
+			tid=getQueryString('id');
+			$("#t_id").val(tid==null?0:tid);
+			$("#loc").val(location.protocol+"//"+location.host);
+			$("#image_form").prop("action",act+"/superAdmin/printerConfig/UploadImage");
+			$("#image_form").submit();
+		}else{
+			w2alert("您的浏览器有点落后，建议更换Chrome内核浏览器");
+			return false;
+		}
+	}
+
+</script>

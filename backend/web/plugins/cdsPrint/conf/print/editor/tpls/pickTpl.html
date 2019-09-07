@@ -1,0 +1,134 @@
+	<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>纸张设置+边距设置<div style='float: right; margin-right: 3px'>[单位:毫米]</div></div>
+	<div class='tplItemWrap'>
+		<div class='tplItemRow'>
+			<span>常见尺寸:</span>
+			<button  bill_width="57" bill_height="50"  class="bill btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> 57*50</button>
+			<button  bill_width="57" bill_height="60"  class="bill btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 57*60</button>
+			<button  bill_width="57" bill_height="80"  class="bill btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> 57*80</button>
+			<button  bill_width="57" bill_height="110"  class="bill btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 57*110</button>
+			<button  bill_width="60" bill_height="40"  class="bill btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> 60*40</button>
+			<button  bill_width="60" bill_height="50"  class="bill btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 60*50</button>
+			<button  bill_width="80" bill_height="50"  class="bill btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> 80*50</button>
+			<button  bill_width="80" bill_height="60"  class="bill btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 80*60</button>
+			<button  bill_width="80" bill_height="80"  class="bill btn btn-info btn-xs"><span class="glyphicon glyphicon-ok"></span> 80*80</button>
+			<button  bill_width="80" bill_height="110"  class="bill btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 80*110</button>
+		</div>
+		<div class="tplItemRow">
+			<span>打印边距设置：</span>
+			<span style='margin-left: 14px;'>上边距:</span><input name='page_top' type='text' class='w2ui-input w2field w2float' style='width:45px'/>
+			<span style='margin-left: 8px;'>左边距:</span><input name='page_left' type='text' class='w2ui-input w2field w2float' style='width:45px'/>
+		</div>
+		<div class='tplItemRow'>
+			<span>纸张宽:</span><input name='page_width' id="page_width" type='text' class='w2ui-input w2field w2float' style='width:80px'/>
+			<span style='margin-left: -2px;'>纸张高:</span><input name='page_height' id="page_height" type='text' class='w2ui-input w2field w2float' style='width:80px'/>
+			<button  id="setting"   class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> 确定</button>
+		</div>
+		<div class='tplItemRow' style='display:none'>
+			<span>打印机:</span><input name='printer' id='printer_list' type='list' class='w2ui-select w2field w2ui-input' style='width:140px'/>
+			<span style='margin-left: 5px;'>纸张名:</span><input name='paper' id='paper_list' type='list' class='w2ui-select w2field w2ui-input' style='width:140px'/>
+		</div>
+		<div class='tplItemRow' style='display:none'>
+			<div style='width: 40px;float:left;margin-top: -4px; text-align: right;'>打印边<br/>界按:</div><input name='printer_margin_type' id='printer_border' type='list' class='w2ui-select w2field w2ui-input' style='width:140px;float:left'/>
+			<div style='width: 40px;float:left; margin-left: 5px; margin-top: -4px; text-align: right;'>打印方<br/>向:</div><input name='print_direct' id='print_direct' type='list' class='w2ui-select w2field w2ui-input' style='width:140px;float:left;'/>
+			<div  style='clear:both;'></div>
+		</div>
+	</div>
+</div>
+
+	<div class='oneCate'>
+		<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>主体信息</div>
+		<div class='tplItemWrap' pre='trade'>
+
+	        <label for="shop_name">线路</label>
+	        <input type="checkbox" name="shop_name" id="shop_name">
+			<label for="stopgap_code">线路临时编码</label>
+			<input type="checkbox" name="stopgap_code" id="stopgap_code">
+			<label for="goods-no">序号</label>
+			<input type="checkbox" name="no" id="goods-no">
+	        <label for="goods_name">商品名称</label>
+	        <input type="checkbox" name="goods_name" id="goods_name">
+
+	        <label for="amount_info">订购数量(带单位转化信息)</label>
+			<input type="checkbox" name="amount_info" id="amount_info">
+
+	        <label for="actual_amount">分拣数量</label>
+	        <input type="checkbox" name="actual_amount" id="actual_amount">
+
+	        <label for="unit">单位</label>
+	        <input type="checkbox" name="unit" id="unit">
+			<label for="durability_period">保质期</label>
+			<input type="checkbox" name="durability_period" id="durability_period">
+			<label for="mfg_date">生产日期</label>
+			<input type="checkbox" name="mfg_date" id="mfg_date">
+
+	        <label for="date">送货日期</label>
+	        <input type="checkbox" name="date" id="date">
+			<label for="goods_remark">商品备注</label>
+			<input type="checkbox" name="goods_remark" id="goods_remark">
+			<label for="summary">商品描述</label>
+			<input type="checkbox" name="summary" id="summary">
+
+	        <label for="order_commodity_code">分拣条码</label>
+	        <input type="checkbox" name="order_commodity_code" id="order_commodity_code" _type='barcode'>
+			<label for="origin_url">溯源码</label>
+			<input type="checkbox" name="origin_url" id="origin_url" _type='qrcode'>
+			<label for="sort_name">分拣员</label>
+			<input type="checkbox" name="sort_name" id="sort_name" >
+			<label for="sort_time">分拣时间</label>
+			<input type="checkbox" name="sort_time" id="sort_time">
+		</div>
+	</div>
+
+	<div class='oneCate'>
+		<div class='tplCateTitle'><span class='ui-icon ui-icon-triangle-1-s'></span>收货人信息</div>
+		<div class='tplItemWrap' pre='trade'>
+
+		    <label for="email">店铺名称</label>
+	        <input type="checkbox" name="email" id="email">
+
+	        <label for="user_code">客户编码</label>
+	        <input type="checkbox" name="user_code" id="user_code">
+			<label for="sort_code" id="sort_code_label" style="display: none;">临时编码</label>
+			<input type="checkbox" name="sort_code" id="sort_code" style="display: none;">
+		</div>
+	</div>
+<script>
+	$(function(){
+		$(".bill").click(function(){
+			var ta=$(this);
+			var w=ta.attr("bill_width"),h=ta.attr("bill_height");
+			console.log(w+":"+h);
+			$("#page_width").val(w);
+			$("#page_height").val(h);
+			$('.paper').width(w+'mm');
+			$('.paper').height(h+'mm');
+			$('#goods_container_wrap').css({width:w+'mm'});
+		});
+		$("#setting").click(function(){
+			var w=$.trim($("#page_width").val());
+			var h=$.trim($("#page_height").val());
+			if(!w||!h){
+				w2alert('请填写正确的尺寸值!');
+				return false;
+			}
+			$('.paper').width(w+'mm');
+			$('.paper').height(h+'mm');
+			$('#goods_container_wrap').css({width:w+'mm'});
+		});
+		$("#setText").click(function(){
+			var sed = $('.paper').find('.a_field.selected');
+			if(sed){
+				var v=$(".cus_define #words").val();
+				if($.trim(v)==""){
+					w2alert("请填写你要修改的内容");
+				}else{
+					sed.prop ('firstChild').nodeValue=v;
+				}
+
+			}else{
+				w2alert("请选择你要修改的内容");
+			}
+
+		});
+	});
+</script>
